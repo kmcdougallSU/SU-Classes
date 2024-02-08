@@ -3,7 +3,7 @@
     (a). Memory compaction / relocation should be performed when a few different scenarios / factors occur.
 
         1. When a significant amount of memory has been allocated but with large amounts of fragmentation is occurring.
-        2. If there are waiting jobs
+
             (a). more so if there are jobs waiting on allocation but no contiguous memory is available due to fragmentation.
         3. After a set amount of time has elapsed
             (a). Setting compaction to occur at regular intervals to help with fragmentation is a good idea. However, it should be tied into system load to avoid performance overhead.
