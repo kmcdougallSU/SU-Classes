@@ -1,0 +1,41 @@
+1.	You are given two linked lists with O(n) elements. You are asked to find the intersection of two lists. Assume that the sets don’t have duplicates and not sorted, and also assume that comparison operation is a simple statement and it takes O(1) time.
+
+a.	Please provide a pseudo code that has the growth rate of O(n2)
+
+    intersection findIntersection(list1, list2) {
+        LinkedList intersection = new LinkedList
+
+        foreach node in list1
+            foreach node in list2
+                if node1.value == node2.value
+                        intersection.append(node1.value)
+        return intersection
+    }
+
+b.	Improve your solution, and give a pseudo code that has a better growth rate which is O(nlogn).
+
+    intersection findIntersection(list1, list2) {
+        sort(list1) //nlogn
+        LinkedList intersection = new LinkedList
+
+        foreach node in list2
+            if (binarySearch(list1, node.value) //logn
+                intersection.append(node.value)
+        return intersection
+    }
+
+
+c.	Is it possible to make it O(n)? Please provide a pseudo code for your solution, if any.
+
+    could use a hash table with the first lists elements and checks the second lists elements against it, assuming no collisions
+
+    HashTable ht = new HashTable
+    LinkedList intersection = new LinkedList
+
+    foreach node in list1
+        ht.insert(node.value, true)
+
+    foreach node in list2
+        if ht.exists(node.value)
+            intersection.append(node.value)
+    return intersection
