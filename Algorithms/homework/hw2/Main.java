@@ -1,16 +1,18 @@
-public class MainFibonacci {
+package algorithms.homework.hw2;
+
+class Main {
     static int iterativeCount = 0;
     static int recursiveCount = 0;
     static int recursiveAccumCount = -1;
 
     public static void main(String[] args) {
 //        int n = 3;
-//        int n = 10;
-        int n = 20;
+        int n = 10;
+//        int n = 20;
 
         fibIterative(n);
         fibRecursive(n);
-        fibRecursiveAccum(n,0,1);
+        fibRecursiveAccum(n, 0, 1);
 
         System.out.println("\n# of iterative addition operations: " + iterativeCount);
         System.out.println("\n# of recursive addition operations: " + recursiveCount);
